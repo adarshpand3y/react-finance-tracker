@@ -1,8 +1,19 @@
+import Navbar from "./Components/Navbar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Homepage from "./Pages/Homepage";
+import AddExpense from "./Pages/AddExpense";
+
 function App() {
   return (
-    <div className="App">
-      <h1>Hello World</h1>
-    </div>
+    <>
+      <BrowserRouter>
+      <Navbar />
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/add" element={<AddExpense />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
